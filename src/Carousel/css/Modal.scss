@@ -1,0 +1,169 @@
+$modalGradient: linear-gradient(to top, #000 0%, transparent 100%);
+$modalColor: rgba(255, 255, 255, 0.15);
+.main-modal{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    &_item{
+        padding: 20px;
+        border-radius: 20px;
+        min-width: 500px;
+        min-height: 400px;
+        max-width: 500px;
+        max-height: 400px;
+        width: 100%;
+        height: 100%;     
+    }   
+}
+
+[data-headlessui-state~="open"] > div:first-child{
+    background: rgba (0,0,0, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);    
+}
+
+.modal-image{
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+    object-position: center;
+    background: #000;
+}
+
+.mosal-content {
+    padding: 2rem;
+    background: $modalGradient;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    border-radius: 0 0 24px 24px;
+    backdrop-filter: blur(16px);
+}
+
+.modal-close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: $modalColor;
+    backdrop-filter: blur(16px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;    
+    &:hover{
+        background: $modalColor;
+    }   
+}
+
+.gallery-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.gallery-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.gallery-modal-content {
+  pointer-events: all;
+  width: 100%;
+  max-width: 1400px;
+  max-height: 95vh;
+  background: white;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+  position: relative;
+  animation: modalAppear 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.gallery-modal-close:hover {
+  transform: scale(1.15);
+  background: white;
+}
+
+.gallery-modal-header {
+  padding: 32px 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.gallery-modal-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.gallery-modal-body {
+  max-height: calc(95vh - 160px);
+  overflow-y: auto;
+  padding: 32px 40px;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.4);
+  }
+}

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  font-family: "Monseratt", sans-serif;
+}
+.header__logo {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 170%;
+  background-size: cover;
+  color: yellowgreen;
+  background-image: url("../assets/images/hero/logo.webp");
+}
+
+main {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+}
+
+.main-menu-container {
+  background-color: rgb(105, 116, 119);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid red;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80wv;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__item {
+  margin: 20px;
+}
+.nav__item_button {
+  color: #fff;
+  padding: 14px 32px;
+  background: #2C3878;
+}
+.nav__item_button button {
+  background-color: black;
+  color: white;
+}
+.nav__item_button button:hover {
+  background-color: lightcyan;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav__item {
+    margin: 15;
+  }
+  .nav__item_button {
+    padding: 2px 5px;
+  }
+}
+@media screen and (min-width: 480) and (max-width: 768px) {
+  .nav__item {
+    margin: 10px;
+  }
+  .nav__item_button {
+    padding: 0px 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav__item {
+    margin: 10px;
+  }
+  .nav__item_button {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

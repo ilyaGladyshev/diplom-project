@@ -1,0 +1,64 @@
+.hero {
+  padding: 100px 0;
+  position: relative;
+}
+.hero__title {
+  font-weight: bold;
+  font-size: 50px;
+  max-width: 760px;
+}
+.hero__title_smaller {
+  font-size: 52px;
+}
+.hero__image {
+  width: 60%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  border-radius: 60px;
+  background-image: url("../assets/images/hero/me.jpg");
+}
+.hero__parametrs {
+  position: absolute;
+  right: 50px;
+  top: 240px;
+  width: 500px;
+  height: 300px;
+  background: #2C3878;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7px;
+}
+.hero__parametrs_item {
+  padding: 40px 0;
+}
+.hero__parametrs_item span {
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.hero__parametrs_item strong {
+  font-size: 48px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1480x) {
+  .hero__parametrs {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero__parametrs {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__parametrs {
+    display: none;
+  }
+}/*# sourceMappingURL=hero.css.map */

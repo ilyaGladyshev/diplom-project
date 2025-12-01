@@ -1,0 +1,95 @@
+$text-width-desktop: 70vw;
+$canvas-width-desktop: 90vw;
+$wrapper-width-desktop: 100vw;
+$margin-left-desktop: 50px;		
+$margin-top: 25px;
+
+$backgroundBlack: url("../assets/images/background/dark-background.jpg"); 
+$backgroundWhite: url("../assets/images/background/white-background.jpg");
+$gradientBlack: linear-gradient(45deg, rgb(124, 146, 141), rgb(56, 73, 73), rgb(9, 9, 9)); 
+$gradientWhite: linear-gradient(45deg, rgb(235, 247, 245), rgb(225, 254, 255), rgb(239, 244, 210));
+
+@font-face {
+	font-family: 'Franker';
+	src: url('../assets/fonts/Franker.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+}
+
+body{
+    font: 100% $font-stack;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.wrapper{
+	background-image: $backgroundWhite;
+	background-size: cover;
+	width: $wrapper-width-desktop;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.canvas{
+	width: $canvas-width-desktop;
+	background: $gradientWhite;
+	display: flex;	
+	flex-direction: column;
+	align-items: center;
+	z-index: 45;
+}
+
+.router{
+	display: flex;	
+	flex-direction: column;
+	align-items: center;
+}
+
+.container{
+	width: $canvas-width-desktop;
+    margin-left: $margin-left-desktop;
+}
+
+.text-container{
+	width: $text-width-desktop;
+    padding-top: $margin-top;
+}
+
+.routes{
+	display: flex;
+	justify-content: center;
+	width: $canvas-width-desktop;
+	font-family: "Roboto";
+	font-weight: normal;
+	box-sizing: border-box;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	border: solid black;
+	input{
+		width: 100%;
+	}
+	.message{
+		height: 100px;
+		width: 100%;		
+	}
+}

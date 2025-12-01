@@ -1,0 +1,77 @@
+body {
+  font: 100% "Franker", sans-serif;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.wrapper {
+  background-image: url("../assets/images/background/white-background.jpg");
+  background-size: cover;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canvas {
+  width: 90vw;
+  background: linear-gradient(45deg, rgb(235, 247, 245), rgb(225, 254, 255), rgb(239, 244, 210));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 45;
+}
+
+.router {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 90vw;
+  margin-left: 50px;
+}
+
+.text-container {
+  width: 70vw;
+  padding-top: 25px;
+}
+
+.routes {
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  font-family: "Franker", sans-serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: solid black;
+}
+form input {
+  width: 100%;
+}
+form .message {
+  height: 100px;
+  width: 100%;
+}/*# sourceMappingURL=App.css.map */

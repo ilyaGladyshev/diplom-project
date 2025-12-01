@@ -1,0 +1,80 @@
+$modalGradient: linear-gradient(to top, #000 0%, transparent 100%);
+$modalColor: rgba(255, 255, 255, 0.15);
+.modal-image{
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+    object-position: center;
+    background: #000;
+}
+
+.mosal-content {
+    padding: 2rem;
+    background: $modalGradient;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    border-radius: 0 0 24px 24px;
+    backdrop-filter: blur(16px);
+}
+
+.modal-close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: $modalColor;
+    backdrop-filter: blur(16px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;    
+    &:hover{
+        background: $modalColor;
+    }   
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  &:hover img {
+  transform: scale(1.05);
+}
+}
+
+.wide {
+  grid-column: 1 / 4;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .wide {
+    grid-column: 1;
+  }
+}
