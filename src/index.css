@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Campus';
-	src: url('../assets/fonts/Campus.ttf') format('truetype');
+	src: url('./assets/fonts/Campus.ttf') format('truetype');
 	font-weight: 400;
 	font-display: swap;
 }
