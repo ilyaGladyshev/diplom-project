@@ -21,7 +21,7 @@
 ## Стек
 
 | Категория | Технологии |
-|-----------|------------|
+| ----------- | ---------- |
 | UI | React 19, React Router 7 |
 | Сборка | Create React App (`react-scripts`) |
 | Карусель / модалки | embla-carousel-react, @headlessui/react |
@@ -38,8 +38,9 @@ cd diplom-project
 npm install
 npm start
 ```
-Приложение: http://localhost:3000Сборка для продакшена:
+Приложение: http://localhost:3000
 
+Сборка для продакшена:
 ```bash
 npm run build
 ```
