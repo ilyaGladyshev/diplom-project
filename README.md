@@ -21,7 +21,7 @@
 ## Стек
 
 | Категория | Технологии |
-| :-- | :-- |
+| -- | -- |
 | UI | React 19, React Router 7 |
 | Сборка | Create React App (`react-scripts`) |
 | Карусель / модалки | embla-carousel-react, @headlessui/react |
